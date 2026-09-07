@@ -1,6 +1,6 @@
 {
   "name": "mcp-auth-adapter",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "OAuth/OIDC authentication adapter for MCP clients",
   "main": "dist/index.js",
   "bin": {
@@ -44,12 +44,12 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/velias/mcp-auth-adapter.git"
+    "url": "https://github.com/redhat-community-ai-tools/mcp-auth-adapter.git"
   },
   "bugs": {
-    "url": "https://github.com/velias/mcp-auth-adapter/issues"
+    "url": "https://github.com/redhat-community-ai-tools/mcp-auth-adapter/issues"
   },
-  "homepage": "https://github.com/velias/mcp-auth-adapter#readme",
+  "homepage": "https://github.com/redhat-community-ai-tools/mcp-auth-adapter#readme",
   "dependencies": {
     "compression": "^1.8.1",
     "dotenv": "^17.4.2",

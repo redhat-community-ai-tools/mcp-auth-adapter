@@ -10,7 +10,7 @@
 
 If you discover a security vulnerability in this project, please report it
 responsibly through
-[GitHub Security Advisories](https://github.com/velias/mcp-auth-adapter/security/advisories/new).
+[GitHub Security Advisories](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/security/advisories/new).
 
 **Please do not open a public issue for security vulnerabilities.**
 

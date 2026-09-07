@@ -4,9 +4,9 @@
   <img src="docs/banner.svg" alt="Make your existing IdP MCP-ready, now!" width="720"/>
 </p>
 
-[![CI](https://github.com/velias/mcp-auth-adapter/actions/workflows/ci.yml/badge.svg)](https://github.com/velias/mcp-auth-adapter/actions/workflows/ci.yml)
-[![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/velias/f550f0ffe68a574a690032088359fef3/raw/mcp-auth-adapter-coverage.json)](https://github.com/velias/mcp-auth-adapter/actions/workflows/ci.yml)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/velias/mcp-auth-adapter/badge)](https://securityscorecards.dev/viewer/?uri=github.com/velias/mcp-auth-adapter)
+[![CI](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/actions/workflows/ci.yml/badge.svg)](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/actions/workflows/ci.yml)
+[![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/velias/f550f0ffe68a574a690032088359fef3/raw/mcp-auth-adapter-coverage.json)](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/actions/workflows/ci.yml)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/redhat-community-ai-tools/mcp-auth-adapter/badge)](https://securityscorecards.dev/viewer/?uri=github.com/redhat-community-ai-tools/mcp-auth-adapter)
 
 An OAuth/OIDC authentication adapter for [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) clients. It sits in front of any OAuth 2.0 / OIDC upstream IdP - such as Keycloak, Auth0, Okta, Azure AD, Google Identity, or any provider serving standard OAuth 2.0 / OIDC discovery metadata - and provides functionality required by the [MCP Authorization specification](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization) for the most common MCP clients (Claude Code/Desktop, Cursor IDE, ChatGPT, Gemini CLI, VS Code, ...) and [their known problematic behaviours](#known-mcp-client-behaviors).
 
@@ -37,6 +37,10 @@ See [Flow Diagrams](#flow-diagrams) to understand functionality better.
 
 Pre-built container images are published to GitHub Container Registry on every release. This is the recommended way to deploy in production - no Node.js installation required.
 
+Image: `ghcr.io/redhat-community-ai-tools/mcp-auth-adapter` with tags `X.Y.Z`, `X.Y`, `X`, and `latest`.
+
+Older tags were published under `ghcr.io/velias/mcp-auth-adapter`. GHCR does not redirect to the new org namespace, so update to `ghcr.io/redhat-community-ai-tools/mcp-auth-adapter` in pull/run commands.
+
 **Prerequisites:** [Docker](https://docs.docker.com/get-docker/) or [Podman](https://podman.io/docs/installation)
 
 ### Pull and run
@@ -49,13 +53,13 @@ podman run -d --name mcp-auth-adapter \
   -e MCP_BASE_URL=https://mcp-auth.example.com \
   -e MCP_UPSTREAM_SSO_URL=https://sso.example.com/auth/realms/external \
   -e MCP_PROXY_DCR_CLIENT_ID=mcp-client \
-  ghcr.io/velias/mcp-auth-adapter:latest
+  ghcr.io/redhat-community-ai-tools/mcp-auth-adapter:latest
 ```
 
 Or use an env file for all configuration (see [Configuration](#configuration) below):
 
 ```bash
-podman run -d -p 3000:3000 --env-file .env ghcr.io/velias/mcp-auth-adapter:latest
+podman run -d -p 3000:3000 --env-file .env ghcr.io/redhat-community-ai-tools/mcp-auth-adapter:latest
 ```
 
 ### Available tags
@@ -762,7 +766,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup, testing, linting, 
 
 An [OWASP Top 10 security review](docs/owasp-security-review-2026-05-15.md) was performed on 2026-05-15. No critical issues were found.
 
-If you discover a security vulnerability, please report it responsibly via [GitHub Security Advisories](https://github.com/velias/mcp-auth-adapter/security/advisories).
+If you discover a security vulnerability, please report it responsibly via [GitHub Security Advisories](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/security/advisories).
 
 ### Known limitations
 
