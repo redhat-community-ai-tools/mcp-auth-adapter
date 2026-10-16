@@ -191,9 +191,11 @@ describe('GET /health — probe integration via router', () => {
   });
 
   it('does not crash if probe throws — state still reflected in response', async () => {
+    // lastSuccessAt must be strictly before lastErrorAt (upstreamStatus uses >).
+    // Using Date.now() for both used to flake when they landed in the same millisecond.
     const health: UpstreamHealth = {
       url: 'https://sso.example.com',
-      lastSuccessAt: Date.now(),
+      lastSuccessAt: Date.now() - 1_000,
       lastError: null,
       lastErrorAt: null,
       usingFallback: false,
