@@ -1,11 +1,30 @@
 # Changelog
 
 All notable changes to this project are documented here.
-This file is auto-generated from [GitHub Releases](https://github.com/velias/mcp-auth-adapter/releases) — do not edit manually.
+This file is auto-generated from [GitHub Releases](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases) — do not edit manually.
 
 ---
 
-## [v2.4.0](https://github.com/velias/mcp-auth-adapter/releases/tag/v2.4.0) — 2026-07-31
+## [v2.4.2](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases/tag/v2.4.2) — 2026-10-16
+
+* dependencies bump to latest patched versions
+* base image bump
+
+**Full Changelog**: https://github.com/redhat-community-ai-tools/mcp-auth-adapter/compare/v2.4.1...v2.4.2
+
+---
+
+## [v2.4.1](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases/tag/v2.4.1) — 2026-09-07
+
+* Org migration metadata update by @velias in https://github.com/redhat-community-ai-tools/mcp-auth-adapter/pull/83
+* dependencies bumps to patch security issues
+* dev dependencies and gh actions bumps
+
+**Full Changelog**: https://github.com/redhat-community-ai-tools/mcp-auth-adapter/compare/v2.4.0...v2.4.1
+
+---
+
+## [v2.4.0](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases/tag/v2.4.0) — 2026-07-31
 
 ### Features
 * DPoP (RFC 9449) support added if upstream IdP supports it by @velias in https://github.com/velias/mcp-auth-adapter/pull/61
@@ -21,7 +40,7 @@ This file is auto-generated from [GitHub Releases](https://github.com/velias/mcp
 
 ---
 
-## [v2.3.0](https://github.com/velias/mcp-auth-adapter/releases/tag/v2.3.0) — 2026-07-13
+## [v2.3.0](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases/tag/v2.3.0) — 2026-07-13
 
 ### Features
 * Possibility to map DCR Client Name to different IdP Clients by @velias in https://github.com/velias/mcp-auth-adapter/pull/48
@@ -39,7 +58,7 @@ This file is auto-generated from [GitHub Releases](https://github.com/velias/mcp
 
 ---
 
-## [v2.2.1](https://github.com/velias/mcp-auth-adapter/releases/tag/v2.2.1) — 2026-07-03
+## [v2.2.1](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases/tag/v2.2.1) — 2026-07-03
 
 ### Features
 * Logged values are always quoted for consistent parsing by @velias in https://github.com/velias/mcp-auth-adapter/pull/43
@@ -50,7 +69,7 @@ This file is auto-generated from [GitHub Releases](https://github.com/velias/mcp
 
 ---
 
-## [v2.2.0](https://github.com/velias/mcp-auth-adapter/releases/tag/v2.2.0) — 2026-07-02
+## [v2.2.0](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases/tag/v2.2.0) — 2026-07-02
 
 ### Features
 * access logging added by @velias in https://github.com/velias/mcp-auth-adapter/pull/36
@@ -63,7 +82,7 @@ This file is auto-generated from [GitHub Releases](https://github.com/velias/mcp
 
 ---
 
-## [v2.1.0](https://github.com/velias/mcp-auth-adapter/releases/tag/v2.1.0) — 2026-06-22
+## [v2.1.0](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases/tag/v2.1.0) — 2026-06-22
 
 ### Features
 * Full 'OAuth Client Credentials' MCP Spec extension support by @velias in https://github.com/velias/mcp-auth-adapter/pull/27
@@ -79,7 +98,7 @@ This file is auto-generated from [GitHub Releases](https://github.com/velias/mcp
 
 ---
 
-## [v2.0.0](https://github.com/velias/mcp-auth-adapter/releases/tag/v2.0.0) — 2026-06-12
+## [v2.0.0](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases/tag/v2.0.0) — 2026-06-12
 
 ### BREAKING CHANGES
 * `MCP_PROXY_AUTH_STATE_SECRET` is now required when the authorize proxy is active (scope filtering, CIMD, or standalone iss interception). Existing deployments must add this variable — generate with `openssl rand -hex 32`.
@@ -98,7 +117,7 @@ This file is auto-generated from [GitHub Releases](https://github.com/velias/mcp
 
 ---
 
-## [v1.0.1](https://github.com/velias/mcp-auth-adapter/releases/tag/v1.0.1) — 2026-05-25
+## [v1.0.1](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases/tag/v1.0.1) — 2026-05-25
 
 ### Features
 * Improved DRC request validation
@@ -111,7 +130,7 @@ This file is auto-generated from [GitHub Releases](https://github.com/velias/mcp
 
 ---
 
-## [v1.0.0](https://github.com/velias/mcp-auth-adapter/releases/tag/v1.0.0) — 2026-05-15
+## [v1.0.0](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases/tag/v1.0.0) — 2026-05-15
 
 ### Features
 * Container image
@@ -127,7 +146,7 @@ This file is auto-generated from [GitHub Releases](https://github.com/velias/mcp
 
 ---
 
-## [v0.2.0](https://github.com/velias/mcp-auth-adapter/releases/tag/v0.2.0) — 2026-05-14
+## [v0.2.0](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases/tag/v0.2.0) — 2026-05-14
 
 ### Features
 * Initial version with many basic features - DCR, scopes filtering, CIMD
