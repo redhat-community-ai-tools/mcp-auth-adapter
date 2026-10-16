@@ -94,6 +94,43 @@ npm run lint:fix        # Auto-fix
 
 ESLint uses [typescript-eslint](https://typescript-eslint.io/) with type-aware rules (`recommendedTypeChecked`). Config: `eslint.config.mjs`.
 
+### Updating dependencies
+
+After pulling `main`, sync `node_modules` to the lockfile:
+
+```bash
+npm install             # install versions pinned in package-lock.json
+# or: npm ci            # clean install from lockfile only (CI-style)
+```
+
+To bump packages to the latest versions allowed by `package.json` ranges (and refresh the lockfile):
+
+```bash
+npm outdated            # see what can be updated
+npm update              # update within semver ranges
+```
+
+Commit any resulting `package-lock.json` (and `package.json`, if you changed ranges) changes.
+
+### Updating the Docker base image
+
+The `Dockerfile` pins `node:22-alpine` by digest (both build and runtime stages) for reproducible builds. To refresh to the current tag:
+
+```bash
+# Resolve the multi-arch index digest for node:22-alpine
+docker buildx imagetools inspect node:22-alpine --format '{{.Digest}}'
+# or:  skopeo inspect --format '{{.Digest}}' docker://docker.io/library/node:22-alpine
+```
+
+Replace the `@sha256:…` digest on **both** `FROM node:22-alpine@…` lines in `Dockerfile`, then verify:
+
+```bash
+docker build -t mcp-auth-adapter .
+# or:  podman build -t mcp-auth-adapter .
+```
+
+Commit the `Dockerfile` change. Prefer doing this before a release when you want GHCR images to pick up newer Node/Alpine security fixes (`apk upgrade` in the runtime stage only refreshes OS packages at build time — it does not move the Node runtime itself).
+
 ## Code Style, Testing & Architecture
 
 See the **Code style**, **Testing conventions**, and **Performance conventions** sections in [AGENTS.md](AGENTS.md) for the full guidelines (TypeScript strict mode, structured logging, metrics conventions, OAuth error format, testing patterns, etc.).
