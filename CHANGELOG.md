@@ -5,6 +5,17 @@ This file is auto-generated from [GitHub Releases](https://github.com/redhat-com
 
 ---
 
+## [v2.4.3](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases/tag/v2.4.3) — 2026-11-19
+
+* Dependency updates
+
+## New Contributors
+* @kylebuch8 made their first contribution in https://github.com/redhat-community-ai-tools/mcp-auth-adapter/pull/124
+
+**Full Changelog**: https://github.com/redhat-community-ai-tools/mcp-auth-adapter/compare/v2.4.2...v2.4.3
+
+---
+
 ## [v2.4.2](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases/tag/v2.4.2) — 2026-10-16
 
 * dependencies bump to latest patched versions
