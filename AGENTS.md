@@ -291,6 +291,24 @@ npm run lint         # ESLint check
 npm run lint:fix     # ESLint auto-fix
 ```
 
+## Dependency / base-image updates (agent rule)
+
+When the user asks whether dependency updates are necessary, or to check /
+apply dependency updates, **also check and update the Docker base image** —
+not only `package.json` / lockfile deps.
+
+- The `Dockerfile` pins `node:22-alpine` by digest on **both** `FROM` lines
+  (build and runtime). Compare the pinned `@sha256:…` digests to the current
+  multi-arch index digest for `node:22-alpine`.
+- Resolve the current digest with:
+  `docker buildx imagetools inspect node:22-alpine --format '{{.Digest}}'`
+  or `skopeo inspect --format '{{.Digest}}' docker://docker.io/library/node:22-alpine`.
+- If the digest differs, update **both** `FROM` lines and report the change
+  alongside npm outdated results. Prefer applying the bump when asked to
+  update (do not leave a known newer base image unmentioned).
+- Full contributor steps (verify build, rationale for `apk upgrade`) live in
+  [CONTRIBUTING.md](CONTRIBUTING.md) under "Updating the Docker base image".
+
 ## Testing conventions
 
 - Tests use **supertest** on the Express app — no real network, no listening
