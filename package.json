@@ -1,6 +1,6 @@
 {
   "name": "mcp-auth-adapter",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "description": "OAuth/OIDC authentication adapter for MCP clients",
   "main": "dist/index.js",
   "bin": {
@@ -61,12 +61,12 @@
     "@types/express": "^5.0.6",
     "@types/node": "^26.0.1",
     "@types/supertest": "^7.2.0",
-    "@vitest/coverage-v8": "^5.0.0",
+    "@vitest/coverage-v8": "^5.1.0",
     "eslint": "^10.2.1",
     "supertest": "^7.0.0",
     "ts-node": "^10.9.0",
     "typescript": "^6.0.3",
-    "vitest": "^5.0.0",
+    "vitest": "^5.1.0",
     "typescript-eslint": "^8.59.0"
   }
 }
