@@ -5,6 +5,14 @@ This file is auto-generated from [GitHub Releases](https://github.com/redhat-com
 
 ---
 
+## [v2.4.4](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases/tag/v2.4.4) — 2026-11-19
+
+* Base image update
+
+**Full Changelog**: https://github.com/redhat-community-ai-tools/mcp-auth-adapter/compare/v2.4.3...v2.4.4
+
+---
+
 ## [v2.4.3](https://github.com/redhat-community-ai-tools/mcp-auth-adapter/releases/tag/v2.4.3) — 2026-11-19
 
 * Dependency updates
